@@ -106,9 +106,12 @@ class Application extends StatefulWidget {
 
 class _Application extends State<Application> {
   @override
-  void initState() async {
+  void initState(){
     super.initState();
-
+    handleNotification();
+  }
+  
+  void handleNotification() async{
     // Get any messages which caused the application to open from
     // a terminated state.
     RemoteMessage initialMessage =
